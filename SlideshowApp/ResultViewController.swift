@@ -47,9 +47,7 @@ class ResultViewController: UIViewController {
     
 
     
-    @IBAction func unwind(_ sender: Any) {
-    }
-}
+   }
 
 
 

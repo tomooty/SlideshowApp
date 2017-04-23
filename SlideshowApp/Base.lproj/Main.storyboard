@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,12 +55,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epj-LX-JZe">
-                                <rect key="frame" x="267" y="410" width="80" height="30"/>
+                                <rect key="frame" x="267" y="410" width="40" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="zhW-aI-6Mw"/>
+                                    <constraint firstAttribute="width" constant="40" id="zhW-aI-6Mw"/>
                                 </constraints>
-                                <state key="normal" title="再生/停止"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startstop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYS-1c-08j"/>
                                 </connections>
@@ -80,7 +80,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backbutton" destination="8Sy-Jv-UZ9" id="WnM-pA-BwE"/>
                         <outlet property="imageView" destination="RkI-QY-HMh" id="Xlb-Ro-fpi"/>
+                        <outlet property="nextbutton" destination="1lO-VX-MDz" id="aMw-Vd-Uxj"/>
+                        <outlet property="startstopbutton" destination="epj-LX-JZe" id="SSk-5n-OwR"/>
                         <segue destination="ZhM-MM-A8Y" kind="show" identifier="result" id="Ifv-PB-yUp"/>
                     </connections>
                 </viewController>
@@ -110,7 +113,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="8jf-J6-Y4s"/>
+                                    <segue destination="S6b-s0-tgo" kind="unwind" unwindAction="unwindWithSegue:" id="qFk-Pk-6FA"/>
                                 </connections>
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1864.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fqs-jB-Sky">
@@ -133,6 +136,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJq-3h-I6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="S6b-s0-tgo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="64.31784107946028"/>
         </scene>
